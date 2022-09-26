@@ -2,11 +2,7 @@
 
 Aplicación básica usando Spring Boot y plantillas Thymeleaf.
 
-## Requisitos
-
-Necesitas tener instalado en tu sistema:
-
-- Java 8
+Link al repositorio: https://github.com/Silvia452/spring-boot-demoapp.git
 
 ## Ejecución
 
