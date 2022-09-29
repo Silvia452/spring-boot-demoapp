@@ -2,7 +2,7 @@
 
 Aplicación básica usando Spring Boot y plantillas Thymeleaf.
 
-Link al repositorio: https://github.com/Silvia452/spring-boot-demoapp.git
+Link al repositorio de Github: https://github.com/Silvia452/spring-boot-demoapp.git
 
 
 
