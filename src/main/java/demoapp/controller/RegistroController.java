@@ -15,15 +15,10 @@ public class RegistroController {
         return "userForm";
     }
 
-    @RequestMapping("/create")
-    public ModelAndView createUser(@Valid Usuario user, BindingResult result) {
-        ModelAndView model = new ModelAndView();
-        model.addObject("usuario", user);
-        model.setViewName(result.hasErrors() ? "userForm" : "userReady");
-        return model;
-    }
+
 
 }
+
 
 
 

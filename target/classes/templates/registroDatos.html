@@ -7,29 +7,23 @@
         <legend>Datos del usuario</legend>
         <table>
             <tr>
-                <td><label th:text="#{form.user.nombre}">Nombre: </label></td>
+                <td><label th:text="#{form.user.nombre}">Introduce tu nombre: </label></td>
                 <td><input type="text" th:field="*{nombre}" /></td>
             </tr>
             <tr>
-                <td><label th:text="#{form.user.apellido}">Apellido: </label></td>
+                <td><label th:text="#{form.user.apellido}">Introduce tu apellido: </label></td>
                 <td><input type="text" th:field="*{apellido}" /></td>
             </tr>
             <tr>
-                <td><label th:text="#{form.user.edad}">Edad: </label></td>
+                <td><label th:text="#{form.user.edad}">Introduce tu edad: </label></td>
                 <td><input type="number" th:field="*{edad}" /></td>
             </tr>
-            <tr>
-                <td><label th:text="#{form.user.sexo}">Sexo: </label></td>
-                <td><input type="checkbox" th:field="*{sexo}" /></td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="submit">Registrar...</button>
-                </td>
-            </tr>
+
         </table>
     </fieldset>
 </form>
+
+
 
 
 
