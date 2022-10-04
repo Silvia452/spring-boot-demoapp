@@ -1,7 +1,8 @@
 
 <!--registrarse los datos-->
-
-
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<h1 th:text="${mensaje}">Silvia Lorero Salor </h1>
 <form th:action="@{/user/create}" th:object="${usuario}" method="post">
     <fieldset>
         <legend>Datos del usuario</legend>
@@ -37,4 +38,4 @@
     </div>
 
 </form>
-
+</html>
