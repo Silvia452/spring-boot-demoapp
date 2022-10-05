@@ -3,31 +3,34 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <h1 th:text="${mensaje}">Silvia Lorero Salor </h1>
-<form th:action="@{/user/create}" th:object="${usuario}" method="post">
-    <fieldset>
-        <legend>Datos del usuario</legend>
-        <table>
-            <tr>
-                <td><label th:text="#{form.user.nombre}">Introduce tu nombre: </label></td>
-                <td><input type="text" th:field="*{nombre}" /></td>
-            </tr>
-            <tr>
-                <td><label th:text="#{form.user.apellido}">Introduce tu apellido: </label></td>
-                <td><input type="text" th:field="*{apellido}" /></td>
-            </tr>
-            <tr>
-                <td><label th:text="#{form.user.edad}">Introduce tu edad: </label></td>
-                <td><input type="number" th:field="*{edad}" /></td>
-            </tr>
+    <form th:action="@{/user/create}" th:object="${usuario}" method="post">
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            <table>
+                <tr>
+                    <td><label th:text="#{form.user.nombre}">Introduce tu nombre: </label></td>
+                    <td><input type="text" th:field="*{nombre}" th:errorclass="errorfield"/></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label th:text="#{form.user.apellido}">Introduce tu apellido: </label></td>
+                    <td><input type="text" th:field="*{apellido}" /></td>
+                </tr>
+                <tr>
+                    <td><label th:text="#{form.user.edad}">Introduce tu edad: </label></td>
+                    <td><input type="number" th:field="*{edad}" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Registrarse</button>
+                    </td>
+                </tr>
 
-        </table>
-    </fieldset>
-</form>
+            </table>
+        </fieldset>
+    </form>
 
-
-
-
-
+<!--
 <form th:action="@{/user/create}" th:object="${usuario}" method="post">
 
     <div class="errorblock" th:if="${#fields.hasErrors('*')}">
@@ -37,5 +40,10 @@
         </ul>
     </div>
 
+
+
 </form>
+
+-->
+
 </html>
