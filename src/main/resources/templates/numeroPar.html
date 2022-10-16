@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<p> El número se muestra si es par con la palabra yes y por el contrario, con no si es impar </p>
+
+<h1 th:style="${esPar} ? 'string: yes;' : 'string: no'" th:text="${numero}"></h1>
+
+
+</html>
