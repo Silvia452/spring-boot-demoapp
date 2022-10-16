@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+
 import javax.validation.Valid;
 
 @Controller
@@ -16,8 +17,9 @@ public class NumeroParController {
     private NumeroParService service;
 
 
+
     @GetMapping("/esPar")
-    public String saludoForm(NumeroEsPar numeroEsPar) {
+    public String saludoForm(NumeroEsPar numeropar) {
         return "formGetNum";
     }
 
@@ -27,8 +29,6 @@ public class NumeroParController {
             return "formGetNum";
         }
         else {
-            model.addAttribute("numero", numero.getNumero());
-            model.addAttribute("esPar", service.esPar(numero.getNumero()));
             return "esParResult";
         }
     }
