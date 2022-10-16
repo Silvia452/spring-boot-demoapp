@@ -15,21 +15,13 @@ public class ParController {
     @Autowired
     private ParService service;
 
-
-    @GetMapping("/esPar")
-    public String saludoForm (NumData numData) {
-        return "formGetNum";
-    }
-
     @PostMapping("/esPar")
-    public String esPar(@ModelAttribute @Valid BindingResult bindingResult, Model model, Numero numero) {
+    public String esPar(@ModelAttribute @Valid BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             return "formGetNum";
         }
 
-
         else {
-            model.addAttribute("esPar", service.esPar(numero.getNumero()));
             return "esParResult";
         }
     }
