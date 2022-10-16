@@ -1,5 +1,5 @@
 
-<!--registrarse los datos-->
+<!--registrar los datos-->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <h1 th:text="${mensaje}">Silvia Lorero Salor </h1>
@@ -9,15 +9,16 @@
             <table>
                 <tr>
                     <td><label th:text="#{form.user.nombre}">Introduce tu nombre: </label></td>
-                    <td><input type="text" th:field="*{nombre}" /></td>
+                    <td><input type="text" th:field="*{nombre}" th:errorclass="errorfield"/></td>
+                    </td>
                 </tr>
                 <tr>
                     <td><label th:text="#{form.user.apellido}">Introduce tu apellido: </label></td>
-                    <td><input type="text" th:field="*{apellido}" /></td>
+                    <td><input type="text" th:field="*{apellido}" th:errorclass="errorfield"/></td>
                 </tr>
                 <tr>
                     <td><label th:text="#{form.user.edad}">Introduce tu edad: </label></td>
-                    <td><input type="number" th:field="*{edad}" /></td>
+                    <td><input type="text" th:field="*{edad}" th:errorclass="errorfield"/></td>
                 </tr>
                 <tr>
                     <td>
@@ -30,14 +31,20 @@
     </form>
 
 
-    <form th:action="@{/user/create}" th:object="${usuario}" method="post">
+<!--
+<form th:action="@{/user/create}" th:object="${usuario}" method="post">
 
-        <div class="errorblock" th:if="${#fields.hasErrors('*')}">
-            <ul>
-                <li th:each="err : ${#fields.errors('*')}"
+    <div class="errorblock" th:if="${#fields.hasErrors('*')}">
+        <ul>
+            <li th:each="err : ${#fields.errors('*')}"
                 th:text="${err}">Input is incorrect</li>
-            </ul>
-        </div>
+        </ul>
+    </div>
 
-    </form>
+
+
+</form>
+
+-->
+
 </html>
